@@ -1,0 +1,50 @@
+python -m venv ./venv : to create venv, ./venv is path where we want it.
+source ./venv/Scripts/activate : For gitbash && deactivate to close
+C:\> <venv>\Scripts\activate.bat : For CMD
+
+
+python manage.py runserver : To start our django server
+
+python manage.py startapp pages : Creates new app named pages
+python manage.py startapp listings : Creates new app named listings
+python manage.py startapp realtors : Creates new app named realtors
+
+python manage.py collectstatic : IT will create a static folder in root directory
+
+
+# Current issues -> 2 errors in console
+
+Postgresql -> pw: admin, port: 5432
+CREATE DATABASE btredb OWNER postgres;
+
+pip install psycopg2
+pip install psycopg2-binary
+
+python manage.py migrate
+
+Django documentation for models : https://docs.djangoproject.com/en/3.2/ref/models/fields/
+
+python manage.py makemigrations --> Creates migrations for the models that we have created
+python manage.py sqlmigrate listings 0001 -->> To see the sql query for listings table with 0001 version
+python manage.py migrate --> Now the models are succesfully pushed to database->schema->tables.
+
+python manage.py createsuperuser
+*   username = admin
+*   email = admin@gmail.com
+*   pw = 123456
+
+
+Created models using models.py for each app
+* Admin panel customizations->
+* Dark to light, 
+* colors acc. to our theme (CSS + base_site.html),
+* altered admin.py of apps to show proper table 
+
+Worked on dynamic listing from database
+Completed pagination logic
+Completed searching logic and entire seach page
+
+python manage.py startapp accounts --> To create accounts app
+
+To clear cache of our website --> shift + f5
+
